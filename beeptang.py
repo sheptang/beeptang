@@ -103,7 +103,6 @@ async def tryFetchSpotiToken():
         ht_spoti_auth_resp = ht_spoti_auth_req.url
         ht_spoti_auth_resp_code = spotifyAuth.parse_response_code(ht_spoti_auth_resp)
         spotifyAuth.get_access_token(ht_spoti_auth_resp_code)
-        print(f"{spoti_auth_token} -/* {ht_spoti_auth_req} -/* {ht_spoti_auth_resp} -/* {ht_spoti_auth_resp_code} -/* {spoti_token} ")
         spoti_token = spotifyAuth.get_cached_token()
     elif spotifyAuth.is_token_expired(spotifyAuth.get_cached_token()):
         spoti_token = spotifyAuth.refresh_access_token(spoti_token["refresh_token"])
