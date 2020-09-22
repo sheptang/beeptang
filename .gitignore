@@ -112,6 +112,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.cache-sheptang
 
 # Spyder project settings
 .spyderproject
